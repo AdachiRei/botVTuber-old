@@ -68,13 +68,18 @@ botにyoutuber・ニコ生主をやらせるためのシステムです。現在
 　・mecabも先にインストールしておきます。
 　taku910.github.io/mecab/#download
 　mecabはインストールするだけでOKです。
+ 
+ 
+　・Youtube Data API（ニコ生のみの場合不要）
+ 　以下の記事が参考になると思います
+ 　　Youtube Data APIを使用して、Youtube Liveのコメントを取得する
+  　　https://qiita.com/MCK9595/items/fdbd543ff938febcd136
 
 
 　・やります！アンコちゃんの設定（youtubeのみの場合不要）
 
 　yarimasu.ankochan.net
 　からダウンロード・インストールします。
-
 　https://qiita.com/toRisouP/items/52c0701147dcbdeb4b9df
 　を参考に準備を進めます。
 　上記サイトの"anko2unity"をダウンロードします。
@@ -133,7 +138,7 @@ botにyoutuber・ニコ生主をやらせるためのシステムです。現在
 
 【共通】
 　この状態だと次々とresult.txtとsample.txtの中身が更新されていくだけなので、読み上げをさせたい場合は
- 　棒読みちゃんやSoftalk、VoiceRoid等を起動しクリップボード監視をONにします。
+ 　棒読みちゃんやSoftalk、VOICEROID、唄詠等を起動しクリップボード監視をONにします。
 
 ◎著者？
 
