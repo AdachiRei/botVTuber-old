@@ -1,5 +1,5 @@
 # botVTuber
-botにyoutuberをやらせるためのシステムです。現在は主にコメントからのリアルタイムマルコフ連鎖使用。
+botにyoutuber・ニコ生主をやらせるためのシステムです。現在は主にコメントからのリアルタイムマルコフ連鎖使用。
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
@@ -9,21 +9,50 @@ botにyoutuberをやらせるためのシステムです。現在は主にコメ
  
  ・Visual Studio 2017(*以下VS)
  　コードをいじるために必要なエディター
+  
  ・.Net Framework ver4.0.3
  　プログラムを走らせるのに必要な実行環境
+  
+ ・Youtube Data API
+ 　Youtube Liveのコメントを取得するのに使います
+  
  ・やります！アンコちゃん
- 　ニコニコからコメント持ってくるときに使います。
+ 　ニコニコからコメント持ってくるときに使います
+  
  ・anko2unity
  　アンコちゃんに入れるプラグイン
+  
  ・Nicolive Comment Reciever(*一部配布)
  　Unityに入れるパッケージ
+  
  ・MarkovInu(*配布)
  　持ってきたコメントから文章を生成するプログラム
+  
  ・mecab
  　形態素解析ライブラリ
  
  *VSやUnityなどは私たちの開発環境を例として挙げましたが、
   多少バージョンが変わっても動くと思います。
+
+
+◎ファイルの説明
+　・MarkovInu-master
+ 　マルコフ連鎖の本体部分です
+  
+  ・MarkovInu-master_youtube
+ 　youtubeからのコメント取得に関する部分です
+  
+  ・NCR
+ 　ニコ生からのコメント取得に関する部分です。
+  
+  ・result.txt
+  　マルコフ連鎖で生成された文章が保存されます
+  
+  ・sample.txt
+ 　 取得したコメントが保存されます
+   
+  ・NicoliveCommentReciever.unitypackage
+  　メンテナンス用なのであまり気にしなくて大丈夫です
 
 
 ◎設定方法
@@ -41,7 +70,7 @@ botにyoutuberをやらせるためのシステムです。現在は主にコメ
 　mecabはインストールするだけでOKです。
 
 
-　・やります！アンコちゃんの設定
+　・やります！アンコちゃんの設定（youtubeのみの場合不要）
 
 　yarimasu.ankochan.net
 　からダウンロード・インストールします。
@@ -62,7 +91,7 @@ botにyoutuberをやらせるためのシステムです。現在は主にコメ
 　これでアンコちゃんの設定は完了です。
 
 
-　・Unityの設定
+　・Unityの設定（youtubeのみの場合不要）
 
 　アンコちゃん同様、
 　https://qiita.com/toRisouP/items/52c0701147dcbdeb4b9df
@@ -84,17 +113,27 @@ botにyoutuberをやらせるためのシステムです。現在は主にコメ
 　44行目sleep()内はミリ秒を表し、文章生成の間隔を変えられます。
 　57行目n = は文章生成素材とするコメント数を表しています。
 　98行目のStreamWriter()で文章生成の結果を格納するテキストファイルを指定しますが、
-　生成された文章は毎回クリップボードにコピーされるので、Softalkなどでのクリップボード監視を
-　用いることができます。
+　生成された文章は毎回クリップボードにコピーされるので、Softalk、棒読みちゃん等でクリップボード監視を
+　使うと合成音声ソフトに読み上げさせることができます。
 
 　また、"MarkovKey.cs"の18行目N = の数字を変えることでマルコフ連鎖の次数を変更できます。
 
 
 ◎使い方
 
-　上記の通り、やりますアンコちゃん、Unity、MarkovInu(仮)の設定を済ませ、
-　Unityのボタン、MarkovInu.slnの開始ボタンの順に押すと動きます。
+※ニコ動の場合
+（やりますアンコちゃん、Unity、MarkovInu(仮)の設定を済ませた後）SampleScene.unity
+ (NCR>Assets>NicoliveCommentReciver>sample>SampleScene.unity)を起動し、Unityの再生ボタン、
+ MarkovInu.sln(MarkovInu-master>MarkovInu>MarkovInu.sln)の開始ボタンの順に押すと動きます。
 
+※Youtubeの場合
+　MarkovInu.sln(MarkovInu-master_yutube>MarkovInu>MarkovInu.sln)の開始ボタン
+　MarkovInu.sln(MarkovInu-master>MarkovInu>MarkovInu.sln)の開始ボタン
+  両方を押すと動きます。
+
+【共通】
+　この状態だと次々とresult.txtとsample.txtの中身が更新されていくだけなので、読み上げをさせたい場合は
+ 　棒読みちゃんやSoftalk、VoiceRoid等を起動しクリップボード監視をONにします。
 
 ◎著者？
 
