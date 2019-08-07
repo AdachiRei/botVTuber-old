@@ -9,18 +9,25 @@ botにyoutuber・ニコ生主をやらせるためのシステムです。現在
  
  ・Visual Studio 2017(*以下VS)
  　コードをいじるために必要なエディター
+  
  ・.Net Framework ver4.0.3
  　プログラムを走らせるのに必要な実行環境 
+  
  ・Youtube Data API
  　Youtube Liveのコメントを取得するのに使います 
+  
  ・やります！アンコちゃん
  　ニコニコからコメント持ってくるときに使います
+  
  ・anko2unity
  　アンコちゃんに入れるプラグイン
+  
  ・Nicolive Comment Reciever(*一部配布)
  　Unityに入れるパッケージ
+  
  ・MarkovInu(*配布)
  　持ってきたコメントから文章を生成するプログラム
+  
  ・mecab
  　形態素解析ライブラリ
  
