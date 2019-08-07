@@ -144,6 +144,8 @@ Unityにimportしてください。
 
 ・MarkovInu(MarkovInu-master_yutube)の設定（ニコ生のみの場合不要）
 
+22行目の  const string path = @"C:\botVTuber\sample.txt"; カッコ内にsample.txtのpass
+27行目の DicDir = @"C:\botVTuber\MarkovInu-master\MarkovInu\MarkovInu\dic\ipadic" カッコ内に形態素解析ライブラリのpass
 36行目の ApiKey = "ここにYoutube Data APIのキー" のカッコ内にYoutube Data APIのキーを入れてください。
 40行目の   string liveChatId = GetliveChatID("ここにYoutube Liveの番組ID", youtubeService);
  のカッコ内にYoutube Liveの番組ID（IDだけ）を入れてください。
