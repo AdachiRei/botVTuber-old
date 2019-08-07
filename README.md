@@ -162,31 +162,43 @@ Unityにimportしてください。
 
 
 
-・MarkovInu(仮)の設定
+・MarkovInu(MarkovInu-master内)の設定
 
 
 事前にコメントを格納するテキストファイルをどこかに作っておきます。(ex."sample.txt")
 
 配布の"MarkovInu-master"をダウンロードし、MarkovInuフォルダ下の"MarkovInu.sln"を開きます。
 
-21行目のconst string pathの""内に先ほど作ったテキストファイルのパスを入れます。
+22行目のconst string pathの""内に先ほど作ったテキストファイルのパスを入れます。
 
-26行目には形態素解析ライブラリのディレクトリ(-----\MarkovInu-master\MarkovInu\MarkovInu\dic\ipadic)
+27行目には形態素解析ライブラリのディレクトリ(-----\MarkovInu-master\MarkovInu\MarkovInu\dic\ipadic)
 を入力します。
 
-44行目sleep()内はミリ秒を表し、文章生成の間隔を変えられます。
-　57行目n = は文章生成素材とするコメント数を表しています。
+45行目sleep()内はミリ秒を表し、文章生成の間隔を変えられます。
 
-98行目のStreamWriter()で文章生成の結果を格納するテキストファイルを指定しますが、
-　生成された文章は毎回クリップボードにコピーされるので、Softalk、棒読みちゃん等でクリップボード監視を
-　使うと合成音声ソフトに読み上げさせることができます。
+61行目n = は文章生成素材とするコメント数を表しています。
+
+109行目のStreamWriter()で文章生成の結果を格納するテキストファイルを指定します。
+そしてビルド。
+生成された文章は毎回クリップボードにコピーされるので、Softalk、棒読みちゃん等でクリップボード監視を
+
+使うと合成音声ソフトに読み上げさせることができます。
+
 
 
 また、"MarkovKey.cs"の18行目N = の数字を変えることでマルコフ連鎖の次数を変更できます。
 
 
 
+（増やすとよりしっかりした文になりますが元のコメントそのままになりがちです）
 
+
+・MarkovInu(MarkovInu-master_yutube)の設定（ニコ生のみの場合不要）
+
+36行目の ApiKey = "ここにYoutube Data APIのキー" のカッコ内にYoutube Data APIのキーを入れてください。
+40行目の   string liveChatId = GetliveChatID("ここにYoutube Liveの番組ID", youtubeService);
+ のカッコ内にYoutube Liveの番組ID（IDだけ）を入れてください。
+できたらビルド。
 
 
 ◎使い方
@@ -195,10 +207,12 @@ Unityにimportしてください。
 
 ※ニコ生の場合
 
-（やりますアンコちゃん、Unity、MarkovInu(仮)の設定を済ませた後）SampleScene.unity
- (NCR>Assets>NicoliveCommentReciver>sample>SampleScene.unity)を起動し、Unityの再生ボタン、
- 
-MarkovInu.sln(MarkovInu-master>MarkovInu>MarkovInu.sln)の開始ボタンの順に押すと動きます。
+（やりますアンコちゃん、Unity、MarkovInu(仮)の設定を済ませた後）
+SampleScene.unity
+ (NCR>Assets>NicoliveCommentReciver>sample>SampleScene.unity)
+を起動し、Unityの再生ボタン、
+ MarkovInu.sln(MarkovInu-master>MarkovInu>MarkovInu.sln)
+の開始ボタンの順に押すと動きます。
 
 
 
@@ -209,7 +223,9 @@ MarkovInu.sln(MarkovInu-master>MarkovInu>MarkovInu.sln)の開始ボタンの順�
 MarkovInu.sln(MarkovInu-master_yutube>MarkovInu>MarkovInu.sln)の開始ボタン
 
 MarkovInu.sln(MarkovInu-master>MarkovInu>MarkovInu.sln)の開始ボタン
-  両方を押すと動きます。
+
+両方を押すと動きます。
+
 
 
 
