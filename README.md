@@ -9,25 +9,18 @@ botにyoutuber・ニコ生主をやらせるためのシステムです。現在
  
  ・Visual Studio 2017(*以下VS)
  　コードをいじるために必要なエディター
-  
  ・.Net Framework ver4.0.3
- 　プログラムを走らせるのに必要な実行環境
-  
+ 　プログラムを走らせるのに必要な実行環境 
  ・Youtube Data API
- 　Youtube Liveのコメントを取得するのに使います
-  
+ 　Youtube Liveのコメントを取得するのに使います 
  ・やります！アンコちゃん
  　ニコニコからコメント持ってくるときに使います
-  
  ・anko2unity
  　アンコちゃんに入れるプラグイン
-  
  ・Nicolive Comment Reciever(*一部配布)
  　Unityに入れるパッケージ
-  
  ・MarkovInu(*配布)
  　持ってきたコメントから文章を生成するプログラム
-  
  ・mecab
  　形態素解析ライブラリ
  
@@ -58,7 +51,6 @@ botにyoutuber・ニコ生主をやらせるためのシステムです。現在
 ◎設定方法
 
 　・先にVSとUnityをインストールし環境を整えておきます。
-
 　VS；https://docs.microsoft.com/ja-jp/visualstudio/install/install-visual-studio?view=vs-2019
 　(VS 2017の場合；https://docs.microsoft.com/ja-jp/visualstudio/releasenotes/vs2017-relnotes)
 　Unity；https://unity3d.com/jp/get-unity/download
@@ -77,7 +69,6 @@ botにyoutuber・ニコ生主をやらせるためのシステムです。現在
 
 
 　・やります！アンコちゃんの設定（youtubeのみの場合不要）
-
 　yarimasu.ankochan.net
 　からダウンロード・インストールします。
 　https://qiita.com/toRisouP/items/52c0701147dcbdeb4b9df
@@ -97,7 +88,6 @@ botにyoutuber・ニコ生主をやらせるためのシステムです。現在
 
 
 　・Unityの設定（youtubeのみの場合不要）
-
 　アンコちゃん同様、
 　https://qiita.com/toRisouP/items/52c0701147dcbdeb4b9df
 　を参考に"NicoliveCommentReciever"をダウンロードします。
@@ -109,7 +99,6 @@ botにyoutuber・ニコ生主をやらせるためのシステムです。現在
 
 
 　・MarkovInu(仮)の設定
-
 　事前にコメントを格納するテキストファイルをどこかに作っておきます。(ex."sample.txt")
 　配布の"MarkovInu-master"をダウンロードし、MarkovInuフォルダ下の"MarkovInu.sln"を開きます。
 　21行目のconst string pathの""内に先ほど作ったテキストファイルのパスを入れます。
